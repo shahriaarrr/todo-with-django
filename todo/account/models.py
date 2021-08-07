@@ -7,6 +7,6 @@ class User(AbstractUser):
         ("M", "Man"),
         ("u", "unkhow")
     )
-    gender = models.CharField(choices=GENDER_CHOICE)
+    gender = models.CharField(choices=GENDER_CHOICE, max_length=1)
     age = models.PositiveIntegerField()
     description = models.TextField(max_length=1000, blank=False)
