@@ -1,6 +1,5 @@
 from django import forms
-from django.forms import fields
-
+from django import forms
 from .models import *
 
 class Signup(forms.ModelForm):
