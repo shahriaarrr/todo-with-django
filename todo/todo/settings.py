@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'todo_app.apps.TodoAppConfig',
     'account.apps.AccountConfig',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +56,12 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'todo.urls'
 
 AUTH_USER_MODEL = 'account.User'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 TEMPLATES = [
     {

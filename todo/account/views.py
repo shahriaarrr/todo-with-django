@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from .forms import *
 # Create your views here.
-@csrf_exempt()
+@csrf_exempt
 def signup(request):
     if request.method == "GET":
         form = Signup()
