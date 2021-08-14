@@ -26,7 +26,7 @@ $ python3 manage.py runserver
 
 ### How to contribute?
 
-If you want to contribute in this project, read [CONTRIBUTING.md]() for more information.
+If you want to contribute in this project, read [CONTRIBUTING.md](github.com/shahriaarrr/todo-with-django/blob/master/CONTRIBUTING.md) for more information.
 
 
-Developing with &heart; by Shahriar Ghasempour. 2021 &copy;
+Developing with &hearts; by Shahriar Ghasempour. 2021 &copy;
