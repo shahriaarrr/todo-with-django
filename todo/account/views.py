@@ -12,3 +12,4 @@ def signup(request):
         form = Signup(request.POST)
         if form.is_valid():
             user = form.save()
+            return render(request, 'seccess.html', {'username' : user.username})
