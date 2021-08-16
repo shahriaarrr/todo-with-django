@@ -4,11 +4,11 @@ from .models import *
 
 class Signup(forms.ModelForm):
     class Meta:
-        models = User
-        fields = ('username', 'first name', 'last name', 'email', 'age', 'gender')
+        model = User
+        fields = '__all__'
 
 
 class Login(forms.ModelForm):
     class Meta:
-        models = User
+        model = User
         fields = ('username', 'password')

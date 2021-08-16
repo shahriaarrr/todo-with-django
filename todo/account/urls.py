@@ -4,5 +4,5 @@ from .views import *
 
 urlpatterns = [
     path('signup/', signup, name='signup'),
-    path('api/', include('.api.urls'))
+    path('api/', include('account.api.urls'))
 ]
