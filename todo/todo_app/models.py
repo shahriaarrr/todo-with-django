@@ -11,3 +11,6 @@ class Task(models.Model):
     date = models.DateTimeField()
     #rename our manager
     task = models.Manager()
+
+    def __str__(self):
+        return self.title
