@@ -19,7 +19,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('todo_app.urls')),
-    path('account/', include('account.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('signup/', include('account.urls')),
     path('api/account/', include('account.api.urls')),
     path('api/task/', include('todo_app.api.urls')),
 ]
