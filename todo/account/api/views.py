@@ -1,3 +1,4 @@
+from account.models import User
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
@@ -8,7 +9,8 @@ class SignupAPIView(APIView):
     def post(self, request):
         signup_serializer = SignupSerializer(data=request.data)
         if signup_serializer.is_valid():
-            signup_serializer.save()
+            data = signup_serializer.validated_data
+            User.objects.create_user(**data)
             return Response({'message' : 'User successfully signed up'})
 
         return Response({'message' : signup_serializer.errors})
