@@ -2,11 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
+
 from .forms import TaskForm
 # Create your views here.
 @csrf_exempt
 def home(request):
     return HttpResponse("<h1>Welcom to Todo website</h1>")
+
 
 def addTask(request):
     #GET request

@@ -25,7 +25,3 @@ class SignupSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(error)
 
         return value
-
-    def create(self, validated_data):
-        user = User.objects.create_user(**validated_data)
-        return user
