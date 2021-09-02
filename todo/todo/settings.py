@@ -24,6 +24,7 @@ SECRET_KEY = 'je*5foay=(_zg-dzan-a874ua01*+8zh%r$=xipp_j6*iz+=st'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+APPEND_SLASH = True
 
 ALLOWED_HOSTS = []
 
