@@ -17,3 +17,15 @@ class TaskSerializers(serializers.ModelSerializer):
             raise serializers.ValidationError(error)
 
         return value
+
+class DeleteSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Task
+        fields = ('title')
+
+        def validate_title(self, value):
+            tasks = Task.objects.get(title = value)
+            if not tasks:
+                raise serializers.ValidationError("your task should be add in database")
+
+            return value
