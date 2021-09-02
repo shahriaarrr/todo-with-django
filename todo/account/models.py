@@ -10,3 +10,6 @@ class User(AbstractUser):
     gender = models.CharField(choices=GENDER_CHOICE, max_length=1, default="unkhow")
     age = models.PositiveIntegerField(null=True)
     description = models.TextField(max_length=1000, blank=False)
+
+    def __str__(self):
+        return self.username
