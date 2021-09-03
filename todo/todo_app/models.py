@@ -12,6 +12,7 @@ class Task(models.Model):
     title = models.CharField(max_length=15)
     Priority = models.CharField(max_length=4, choices=PRIORITY, default="l")
     task_text = models.TextField()
+    done = models.BooleanField(default=False)
     date = models.DateTimeField(default=timezone.now())
 
     def edit_title(self, new_title):
