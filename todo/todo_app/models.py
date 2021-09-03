@@ -13,8 +13,23 @@ class Task(models.Model):
     Priority = models.CharField(max_length=4, choices=PRIORITY, default="l")
     task_text = models.TextField()
     date = models.DateTimeField(default=timezone.now())
-    #rename our manager
-    task = models.Manager()
+
+    def edit_title(self, new_title):
+        self.title = new_title
+        self.save()
+
+    def edit_Priority(self, new_Priority):
+        self.Priority = new_Priority
+        self.save()
+
+    def edit_task_text(self, new_text):
+        self.task_text = new_text
+        self.save()
+
+    def edit_date(self, new_date):
+        self.date = timezone.now()
+        self.save()
+
 
     def __str__(self):
         return self.title
